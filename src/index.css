@@ -1,0 +1,50 @@
+html {
+  background: midnightblue;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  max-width: 400px;
+  width: 100%;
+  margin: 1rem auto;
+  gap: 1rem;
+}
+
+.item {
+  border-radius: 2%;
+  background: rgb(127, 127, 127, 0.2);
+  width: 100%;
+  filter: drop-shadow(1rem 1rem 1.5rem black);
+  animation: fadeIn 2s;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+.loading {
+  width: 50px;
+  height: 50px;
+  border: 10px solid grey;
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+     transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
